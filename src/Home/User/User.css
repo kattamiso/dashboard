@@ -1,0 +1,54 @@
+.User {
+  display: flex;
+}
+
+.user {
+  height: 130px;
+  position: absolute;
+  padding-left: 150px;
+  bottom: 550px;
+}
+
+.box {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  gap: 12px;
+  margin-left: 110px;
+  bottom: 450px;
+}
+
+.icon-one {
+  background-color: rgb(118, 187, 118);
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.amount {
+  color: rgb(76, 123, 76);
+}
+
+.box-second {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  gap: 5px;
+  margin-left: 110px;
+  bottom: 370px;
+}
+
+.icon-second {
+  background-color: rgb(242, 74, 8);
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.amount-second {
+  color: rgb(190, 106, 72);
+}

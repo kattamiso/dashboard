@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  margin: 40px 70px;
+  background: rgb(222, 217, 217);
+  height: 330px;
+  width: 730px;
+  border-radius: 17px;
+}
+
+.cardImg {
+  position: absolute;
+  height: 270px;
+  width: 360px;
+  margin: 100px 50px 0px 20px;
+  box-shadow: 10px 10px 20px rgba(82, 75, 75, 0.6);
+  border-radius: 25px;
+}
+
+.headContainer ul {
+  display: flex;
+  flex-direction: row;
+  gap: 90px;
+  list-style: none;
+  margin-top: 20px;
+  margin-left: 40px;
+  height: 50px;
+  width: 600px;
+  background-color: rgb(113, 161, 206);
+  border-radius: 12px;
+}
+
+.headContainer ul li {
+  margin-top: 15px;
+  margin-left: 35px;
+}
+
+.headContainer ul li:hover {
+  color: aliceblue;
+  cursor: pointer;
+}
+
+/* table */
+.information {
+  position: absolute;
+  width: 280px;
+  margin-top: 110px;
+  margin-left: 440px;
+  font-family: Arial, sans-serif;
+}
+
+.information .table{
+  padding-top: 10px;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  text-align: center;
+}
+
