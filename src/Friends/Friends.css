@@ -1,0 +1,35 @@
+.Friends {
+  margin:30px;
+}
+
+.friendsTable {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);  
+}
+
+.friendsTable th,
+.friendsTable td {
+  padding: 12px 100px;
+  text-align: left;
+  
+}
+
+.table thead {
+  background-color: #f2f2f2;
+}
+
+.table th {
+  font-weight: bold;
+  color: #333;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+  background-color: #e0e0e0;
+}

@@ -1,12 +1,8 @@
-.User {
-  display: flex;
-}
-
 .user {
-  height: 130px;
+  height: 150px;
   position: absolute;
-  padding-left: 150px;
-  bottom: 550px;
+  padding-left: 1050px;
+  bottom: 600px;
 }
 
 .box {
@@ -17,8 +13,8 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   gap: 12px;
-  margin-left: 110px;
-  bottom: 450px;
+  margin-left: 1020px;
+  bottom: 525px;
 }
 
 .icon-one {
@@ -39,8 +35,8 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   gap: 5px;
-  margin-left: 110px;
-  bottom: 370px;
+  margin-left: 1020px;
+  bottom: 455px;
 }
 
 .icon-second {

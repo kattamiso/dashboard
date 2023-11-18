@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Sidebar.css";
-import { SidebarData } from "./SidebarData";
+import { SidebarData } from "./SidebarData.js";
+
 
 export function Sidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);

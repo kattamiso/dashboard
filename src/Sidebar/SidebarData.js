@@ -24,7 +24,7 @@ export const SidebarData = [
   {
     title: "Friends",
     icon: <GroupIcon />,
-    link: "/friends",
+    link: "/Friends",
   },
   {
     title: "Dashboard",
