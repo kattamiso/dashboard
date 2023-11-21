@@ -1,0 +1,10 @@
+.Analytics{
+    background-color:rgb(213, 197, 213);
+}
+
+.transactions-chart{
+    margin-top: 200px;
+    margin-left: 100px;
+    background-color:rgb(242, 231, 246);
+    border-radius: 50px;
+}

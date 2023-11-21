@@ -7,7 +7,7 @@ import NorthWestIcon from "@mui/icons-material/NorthWest";
 export function User() {
   return (
     <div className="User">
-      <img src={UserImage} className="user" alt="User" />
+      <img src={UserImage} className="userImg" alt="User" />
       <div className="box">
         <SouthEastIcon className="icon-one" />
         <h3 className="title">Income</h3>

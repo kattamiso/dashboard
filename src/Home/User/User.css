@@ -1,20 +1,20 @@
-.user {
+.userImg {
   height: 150px;
-  position: absolute;
-  padding-left: 1050px;
-  bottom: 600px;
+  margin-left: 1000px;
+  bottom: 340px;
+  position: relative;
 }
 
 .box {
-  position: absolute;
   display: flex;
   align-items: center;
+  position: relative;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
   gap: 12px;
-  margin-left: 1020px;
-  bottom: 525px;
+  margin-left: 970px;
+  width: 180px;
+  bottom: 310px;
 }
 
 .icon-one {
@@ -28,15 +28,16 @@
 }
 
 .box-second {
-  position: absolute;
   display: flex;
   align-items: center;
+  position: relative;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   gap: 5px;
-  margin-left: 1020px;
-  bottom: 455px;
+  margin-left: 970px;
+  width: 180px;
+  bottom: 290px;
 }
 
 .icon-second {

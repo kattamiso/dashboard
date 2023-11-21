@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
 }
-
+.Home{
+  width: 0;
+}
 .card {
   display: flex;
   margin: 40px 70px;
@@ -13,10 +15,10 @@
 }
 
 .cardImg {
-  position: absolute;
   height: 270px;
   width: 360px;
-  margin: 100px 50px 0px 20px;
+  margin: 100px;
+  margin-left: -600px;
   box-shadow: 10px 10px 20px rgba(82, 75, 75, 0.6);
   border-radius: 25px;
 }
@@ -44,7 +46,6 @@
   cursor: pointer;
 }
 
-/* table */
 .information {
   position: absolute;
   width: 280px;
