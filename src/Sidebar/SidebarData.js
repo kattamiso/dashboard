@@ -1,19 +1,24 @@
 import HomeIcon from "@mui/icons-material/Home";
-import EmailIcon from "@mui/icons-material/Email";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import GroupIcon from "@mui/icons-material/Group";
 import GridViewIcon from "@mui/icons-material/GridView";
-import PermMediaIcon from "@mui/icons-material/PermMedia";
+import SettingsIcon from "@mui/icons-material/Settings";
+import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 
 export const SidebarData = [
   {
+    title: "Dashboard",
+    icon: <GridViewIcon />,
+    link: "/dashboard",
+  },
+  {
     title: "Payment",
     icon: <HomeIcon />,
-    link: "/Home",
+    link: "/home",
   },
   {
     title: "MailBox",
-    icon: <EmailIcon />,
+    icon: <ChatBubbleIcon />,
     link: "/mailBox",
   },
   {
@@ -24,16 +29,11 @@ export const SidebarData = [
   {
     title: "Friends",
     icon: <GroupIcon />,
-    link: "/Friends",
+    link: "/friends",
   },
   {
-    title: "Dashboard",
-    icon: <GridViewIcon />,
-    link: "/dashboard",
-  },
-  {
-    title: "Images",
-    icon: <PermMediaIcon />,
-    link: "/images",
+    title: "Settings",
+    icon: <SettingsIcon />,
+    link: "/settings",
   },
 ];

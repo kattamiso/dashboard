@@ -1,5 +1,5 @@
 export function Analytics() {
-  return <div className="Analytics">Hello Chart</div>;
+  return <div className="Analytics"></div>;
 }
 
 export default Analytics;

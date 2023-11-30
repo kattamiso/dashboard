@@ -48,8 +48,8 @@ const renderChart = () => {
   }));
 
   return (
-    <ResponsiveContainer width={700} height={700}>
-      <BarChart data={data}  margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+    <ResponsiveContainer width={500} height={500}>
+      <BarChart data={data}  margin={{ top: 0, right: 30, left: 20, bottom: 5 }}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />
@@ -64,7 +64,7 @@ const renderChart = () => {
 const TransactionsChart = () => {
   return (
     <div className="transactions-chart">
-      <h2>Transactions Chart</h2>
+      <h2>Universal Card's Transactions Chart This Week</h2>
       {renderChart()}
     </div>
   );

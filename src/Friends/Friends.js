@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Friends.css";
 import { FriendsData } from "../Friends/FriendsData.js";
+
 
 export function Friends() {
   const [newFriend, setNewFriend] = useState({
@@ -14,17 +15,30 @@ export function Friends() {
     setNewFriend({ ...newFriend, [name]: value });
   };
 
-  const [friendsList, setFriendsList] = useState(FriendsData);
+  const [friendsList, setFriendsList] = useState(() => {
+    const storedFriends = localStorage.getItem("friendsList");
+    return storedFriends ? JSON.parse(storedFriends) : FriendsData;
+  });
+
   const addFriend = () => {
     if (newFriend.name && newFriend.surname && newFriend.birthDate) {
       const updatedFriendsList = [...friendsList, { ...newFriend }];
       setFriendsList(updatedFriendsList);
       setNewFriend({ name: "", surname: "", birthDate: "" });
-
-      localStorage.setItem("friendsList", JSON.stringify(updatedFriendsList));
     } else {
       alert("Please fill in all fields.");
     }
+  };
+
+  useEffect(() => {
+    localStorage.setItem("friendsList", JSON.stringify(friendsList));
+  }, [friendsList]);
+
+
+  const deleteFriend = (index) => {
+    const updatedFriendsList = [...friendsList];
+    updatedFriendsList.splice(index, 1);
+    setFriendsList(updatedFriendsList);
   };
 
   return (
@@ -83,6 +97,9 @@ export function Friends() {
               <td>{friend.surname}</td>
               <td>{friend.birthDate}</td>
               <td>{friend.isActive ? "Active" : "Inactive"}</td>
+              <td>
+                <button onClick={() => deleteFriend(index)}>Delete</button>
+              </td>
             </tr>
           ))}
         </tbody>

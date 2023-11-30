@@ -5,9 +5,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./Home/Payment.js";
 import { Friends } from "./Friends/Friends.js";
 import { User } from "./Home/User/User.js";
+// import  DashboardChart  from "./Dashboard/DashboardChart.js";
+import  {Dashboard}  from "./Dashboard/Dashboard.js";
+import { Searchbar } from "./Dashboard/Searchbar/Searchbar.js";
 import { Analytics } from "./Analytics/Analytics.js";
-import  Transactions  from "./Home/Transactions/Transactions";
-import TransactionsChart from "./Analytics/SimpleLineChart.js"
+import Transactions from "./Home/Transactions/Transactions";
+import TransactionsChart from "./Analytics/SimpleLineChart.js";
+import GoldenCardTransactionChartWrapper from "./Analytics/PieResponsiveContainer.js";
 
 function App() {
   return (
@@ -18,6 +22,7 @@ function App() {
         </div>
         <div>
           <Routes>
+            <Route path="/dashboard" element={<DashboardWithAllComponents />} />
             <Route path="/home" element={<HomeWithUser />} />
             <Route path="/friends" element={<Friends />} />
             <Route path="/analytics" element={<AnalyticsWithChart />} />
@@ -42,7 +47,18 @@ function AnalyticsWithChart() {
   return (
     <div>
       <Analytics />
-      <TransactionsChart/>
+      <TransactionsChart />
+      <GoldenCardTransactionChartWrapper />
+    </div>
+  );
+}
+
+function DashboardWithAllComponents() {
+  return (
+    <div>
+      <Searchbar />
+      {/* <DashboardChart /> */}
+      <Dashboard/>
     </div>
   );
 }
