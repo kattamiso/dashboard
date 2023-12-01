@@ -1,45 +1,57 @@
 import "./Settings.css";
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 
 export function Settings() {
-  const initialValues = { username: "", email: "", password: "" };
+  const initialValues = {
+    username: "",
+    email: "",
+    password: "",
+    age: "",
+    address: "",
+  };
+
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
-  const [isSubmit, setIsSubmit] = useState(false)
+  const [isSubmit, setIsSubmit] = useState(false);
 
- const handleChange = (e) => {
-   console.log(e.target);
-   const { name, value} = e.target;
-   setFormValues({...formValues, [name]: value})
-   console.log(formValues);
- };
-const validate = (values) => {
-   const errors ={}
-   if(!values.username) {
-      errors.username = "Username is required!"
-   }
-   if(!values.email) {
-      errors.email = "Email is required!"
-   }   
-   if(!values.password) {
-      errors.password = "Password is required!"
-   }
-   return errors;
- }
- const handleSubmit = (e) => {
-   e.preventDefault();
-   setFormErrors(validate(formValues))
-   setIsSubmit(true)
- }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
 
- 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormErrors(validate(formValues));
+    setIsSubmit(true);
+    alert("Saved successfully");
+  };
+
+  useEffect(() => {
+    console.log(formErrors);
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      console.log(formValues);
+    }
+  }, [formErrors, formValues, isSubmit]);
+
+  const validate = (values) => {
+    const errors = {};
+    if (!values.username) {
+      errors.username = "Username is required!";
+    }
+    if (!values.email) {
+      errors.email = "Email is required!";
+    }
+    if (!values.password) {
+      errors.password = "Password is required!";
+    }
+    return errors;
+  };
 
   return (
     <div className="Settings">
-      <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
       <form onSubmit={handleSubmit}>
-        <h1>Settings</h1>
+        <h1 className="formTitle">Settings</h1>
         <div className="ui-divider"></div>
         <div className="form">
           <div className="field">
@@ -51,8 +63,8 @@ const validate = (values) => {
               value={formValues.username}
               onChange={handleChange}
             />
+            <p>{formErrors.username}</p>
           </div>
-
           <div className="field">
             <label>Email</label>
             <input
@@ -62,6 +74,7 @@ const validate = (values) => {
               value={formValues.email}
               onChange={handleChange}
             />
+            <p>{formErrors.email}</p>
           </div>
           <div className="field">
             <label>Password</label>
@@ -72,8 +85,31 @@ const validate = (values) => {
               value={formValues.password}
               onChange={handleChange}
             />
+            <p>{formErrors.password}</p>
           </div>
-          <button className="submit-button">Submit</button>
+          <div className="field">
+            <label>Age</label>
+            <input
+              type="text"
+              name="age"
+              placeholder="Age"
+              value={formValues.age}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="field">
+            <label>Address</label>
+            <textarea
+              name="address"
+              placeholder="Address"
+              value={formValues.address}
+              onChange={handleChange}
+              className="address"
+            />
+          </div>
+          <button type="submit" className="submit-button">
+            Submit
+          </button>
         </div>
       </form>
     </div>
