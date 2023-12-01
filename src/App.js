@@ -12,6 +12,7 @@ import { Analytics } from "./Analytics/Analytics.js";
 import Transactions from "./Home/Transactions/Transactions";
 import TransactionsChart from "./Analytics/SimpleLineChart.js";
 import GoldenCardTransactionChartWrapper from "./Analytics/PieResponsiveContainer.js";
+import  {Settings}  from "./Settings/Settings";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/home" element={<HomeWithUser />} />
             <Route path="/friends" element={<Friends />} />
             <Route path="/analytics" element={<AnalyticsWithChart />} />
+            <Route path="/settings" element={<Settings />} />
           </Routes>
         </div>
       </div>
@@ -57,7 +59,6 @@ function DashboardWithAllComponents() {
   return (
     <div>
       <Searchbar />
-      {/* <DashboardChart /> */}
       <Dashboard/>
     </div>
   );

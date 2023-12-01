@@ -1,4 +1,3 @@
-import { create } from "@mui/material/styles/createTransitions";
 import React, { createContext, useState, useContext } from "react";
 
 export const DataContext = createContext();
@@ -36,27 +35,9 @@ export const DataContextProvider = ({ children }) => {
   return (
     <DataContext.Provider value={{ data }}>
       {children}
-      </DataContext.Provider>
+    </DataContext.Provider>
   );
 };
 
-export function DashboardData() {
-  const { data } = useContext(DataContext);
 
-  return (
-    <div className="DashboardData">
-      <ul>
-        {data.map((item, index) => (
-          <li key={index}>
-            <p>Name: {item.name}</p>
-            <p>Amount:{item.amount}</p>
-            <p>Percentage:{item.percentage}</p>
-            <p>Time:{item.time}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-export default DashboardData;
+export default DataContextProvider;

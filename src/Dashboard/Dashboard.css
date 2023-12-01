@@ -1,7 +1,14 @@
 .dashboard {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-  
-  
+
+.LineChart {
+  margin: 100px 50px 0px 50px;
+}
+
+.PieChart {
+  margin-left: 800px;
+  margin-top: -400px;
+}

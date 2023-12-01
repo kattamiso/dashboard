@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import "./Dashboard.css"
 import { DataContext } from "./DashboardData";
 import {
   LineChart,
@@ -15,7 +16,7 @@ const DottedChart = () => {
 
   return (
     <DataContextProvider>
-      <LineChart width={400} height={300} data={data}>
+      <LineChart width={700} height={400} data={data} className="LineChart">
         <CartesianGrid stroke="#ccc" />
         <XAxis dataKey="name" />
         <YAxis />
