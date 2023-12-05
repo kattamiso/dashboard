@@ -1,6 +1,6 @@
 import React from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
-import countriesData from "./package.json"; // Replace with the correct path
+import countriesData from "./package.json";
 
 const WorldMap = () => (
   <ComposableMap>

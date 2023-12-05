@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
-import { DataContext } from "./DashboardData";
+import  DataContext  from "./DataContext";
 import { PieChart, Pie, Tooltip } from "recharts";
-import DataContextProvider from "./DashboardData";
 import "./Dashboard.css"
 
 
@@ -9,7 +8,6 @@ const RoundChart = () => {
   const { data } = useContext(DataContext);
 
   return (
-    <DataContextProvider>
       <PieChart width={600} height={500} className="PieChart">
         <Pie
           data={data}
@@ -23,7 +21,6 @@ const RoundChart = () => {
         />
         <Tooltip />
       </PieChart>
-    </DataContextProvider>
   );
 };
 

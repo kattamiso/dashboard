@@ -1,17 +1,19 @@
 import React, { useContext } from "react";
-import { DataContext } from "../DashboardData";
-import DataContextProvider from "../DashboardData";
+import  {DataContext}  from "../DataContext";
 import "./CardsDashboard.css"
 
-export function CardsDashboard() {
-    const { data } = useContext(DataContext);
-    
+export function CardsDashboard() {    
+  const { data } = useContext(DataContext);
+  
+  if (!data || data.length === 0) {
+    return <div>No data available</div>;
+  }
+
     const redirectToHome = () => {
       window.location.pathname = '/Home'; 
     };
 
   return (
-    <DataContextProvider>
     <div className="CardsDashboard">
       {data.map((item, index) => (
         <div key={index} className="window">
@@ -22,7 +24,6 @@ export function CardsDashboard() {
         </div>
       ))}
     </div>
-    </DataContextProvider>
     
   );
 }

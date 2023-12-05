@@ -1,6 +1,5 @@
 import React, { createContext, useState, useContext } from "react";
-
-export const DataContext = createContext();
+import DataContext from "./DataContext"
 
 export const initialData = [
   {
@@ -29,7 +28,7 @@ export const initialData = [
   },
 ];
 
-export const DataContextProvider = ({ children }) => {
+export const DashboardData = ({ children }) => {
   const [data, setData] = useState(initialData);
 
   return (
@@ -40,4 +39,4 @@ export const DataContextProvider = ({ children }) => {
 };
 
 
-export default DataContextProvider;
+export default DashboardData;

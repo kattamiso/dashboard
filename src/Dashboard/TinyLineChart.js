@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { curveCardinal } from 'd3-shape';
-import { DataContext } from "./DashboardData";
+import  DataContext  from "./DataContext";
 
 const TinyLineChart = () => {
   const { data } = useContext(DataContext);
